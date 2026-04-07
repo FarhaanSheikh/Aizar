@@ -216,100 +216,217 @@
 
 <body>
     <header>
-        <h1>Aizar</h1>
-        <p>Where Comfort Meets Couture</p>
-    </header>
-    <div class="search-bar">
-        <input type="text" placeholder="Search for products...">
-        <button>Search</button>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aizar</title>
+
+    <style>
+        body {
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            padding-top: 160px;
+        }
+
+        a { text-decoration: none; }
+
+        header {
+            background-color: #2C3E50;
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        header h1 { font-size: 36px; margin: 0; }
+        header p { font-size: 18px; margin: 10px 0 0; }
+
+        .search-bar {
+            position: fixed;
+            top: 120px;
+            left: 0; right: 0;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            background-color: #fff;
+            padding: 10px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .search-bar input {
+            padding: 12px 20px;
+            border-radius: 25px;
+            border: 1px solid #ddd;
+            width: 300px;
+        }
+
+        .search-bar button {
+            padding: 12px 20px;
+            background-color: #8e44ad;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+
+        nav {
+            background-color: #16a085;
+            padding: 20px 0;
+            position: fixed;
+            top: 180px;
+            left: 0; right: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0; padding: 0;
+        }
+
+        nav li { margin: 0 20px; }
+
+        nav a { color: white; }
+
+        .Home-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .product {
+            background: #fff;
+            border-radius: 10px;
+            text-align: center;
+            padding: 20px;
+            transition: 0.3s;
+        }
+
+        .product img {
+            width: 100%;
+            height: 250px;
+            object-fit: contain;
+        }
+
+        .price {
+            background: #06e837;
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Aizar</h1>
+    <p>Where Comfort Meets Couture</p>
+</header>
+
+<div class="search-bar">
+    <input type="text" id="searchInput" onkeyup="searchProducts()" placeholder="Search for products...">
+    <button onclick="searchProducts()">Search</button>
+</div>
+
+<nav>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Men</a></li>
+        <li><a href="#">Women</a></li>
+        <li><a href="#">Accessories</a></li>
+    </ul>
+</nav>
+
+<div class="Home-content">
+
+    <div class="product">
+        <img src="fg.jpg">
+        <h3 class="product-name">White Sweat Shirt For Men</h3>
+        <p class="price">₹ 1,199</p>
     </div>
-    <nav>
-        <ul>
-            <li><a href="home.html">Home</a></li>
-            <li> <a href="men.html">Men</a></li>
-            <li><a href="women.html ">Women</a></li>
-            <li><a href="accessories.html ">Accessories</a></li>
-            <li><a href="contact.html ">Contact Us</a></li>
-        </ul>
-    </nav>
 
-    <div class="Home-content ">
-        <div class="product ">
-            <img src="fg.jpg " alt="White Sweat Shirt " />
-            <div class="product-details ">
-                <h3>White Sweat Shirt For Men</h3>
-                <p class="price ">₹ 1,199</p>
-            </div>
-        </div>
-
-        <div class="product ">
-            <img src="th.jpg " alt="Black Sweat Shirt " />
-            <div class="product-details ">
-                <h3>Black Sweat Shirt For Men</h3>
-                <p class="price ">₹ 1,199</p>
-            </div>
-        </div>
-
-        <div class="product ">
-            <img src="white shirt.jpg " alt="White Shirt " />
-            <div class="product-details ">
-                <h3>White Shirt For Men</h3>
-                <p class="price ">₹ 1,299</p>
-            </div>
-        </div>
-
-        <div class="product ">
-            <img src="black jumper.jpg " alt="Black Jumper For Women " />
-            <div class="product-details ">
-                <h3>Black Jumper For Women</h3>
-                <p class="price ">₹ 1,499</p>
-            </div>
-        </div>
-
-        <div class="product ">
-            <img src="Black Solid New Neckline Top.jpg " alt="Black Solid Neckline Top For Women " />
-            <div class="product-details ">
-                <h3>Black Solid Neckline Top For Women</h3>
-                <p class="price ">₹ 1,399</p>
-            </div>
-        </div>
-
-        <div class="product ">
-            <img src="Women Black Scoop Neck Full Sleeves Top.jpg " alt="Black Scoop Neck Full Sleeves Top " />
-            <div class="product-details ">
-                <h3>Black Scoop Neck Full Sleeves Top</h3>
-                <p class="price ">₹ 1,199</p>
-            </div>
-        </div>
-
-        <div class="product ">
-            <img src="davidoff cool water perfume.jpg " alt="Davidoff Cool Water Perfume " />
-            <div class="product-details ">
-                <h3>Davidoff Cool Water Perfume</h3>
-                <p class="price ">₹ 2,199</p>
-            </div>
-        </div>
-
-        <div class="product ">
-            <img src="Angel skull pendant.jpg " alt="Angel Skull Pendant " />
-            <div class="product-details ">
-                <h3>Angel Skull Pendant</h3>
-                <p class="price ">₹ 899</p>
-            </div>
-        </div>
-
-        <div class="product ">
-            <img src="fossil gen 5 garret.jpg " alt="Fossil Gen 5 Garrett " />
-            <div class="product-details ">
-                <h3>Fossil Gen 5 Garrett</h3>
-                <p class="price ">₹ 15,999</p>
-            </div>
-        </div>
+    <div class="product">
+        <img src="th.jpg">
+        <h3 class="product-name">Black Sweat Shirt For Men</h3>
+        <p class="price">₹ 1,199</p>
     </div>
 
-    <footer>
-        <p>&copy; 2025 Fashion Store | <a href="# ">Privacy Policy</a> | <a href="# ">Terms & Conditions</a></p>
-    </footer>
+    <div class="product">
+        <img src="white shirt.jpg">
+        <h3 class="product-name">White Shirt For Men</h3>
+        <p class="price">₹ 1,299</p>
+    </div>
+
+    <div class="product">
+        <img src="black jumper.jpg">
+        <h3 class="product-name">Black Jumper For Women</h3>
+        <p class="price">₹ 1,499</p>
+    </div>
+
+    <div class="product">
+        <img src="Black Solid New Neckline Top.jpg">
+        <h3 class="product-name">Black Solid Neckline Top For Women</h3>
+        <p class="price">₹ 1,399</p>
+    </div>
+
+    <div class="product">
+        <img src="Women Black Scoop Neck Full Sleeves Top.jpg">
+        <h3 class="product-name">Black Scoop Neck Full Sleeves Top</h3>
+        <p class="price">₹ 1,199</p>
+    </div>
+
+    <div class="product">
+        <img src="davidoff cool water perfume.jpg">
+        <h3 class="product-name">Davidoff Cool Water Perfume</h3>
+        <p class="price">₹ 2,199</p>
+    </div>
+
+    <div class="product">
+        <img src="Angel skull pendant.jpg">
+        <h3 class="product-name">Angel Skull Pendant</h3>
+        <p class="price">₹ 899</p>
+    </div>
+
+    <div class="product">
+        <img src="fossil gen 5 garret.jpg">
+        <h3 class="product-name">Fossil Gen 5 Garrett</h3>
+        <p class="price">₹ 15,999</p>
+    </div>
+
+</div>
+
+<footer>
+    <p>&copy; 2025 Fashion Store</p>
+</footer>
+
+<script>
+function searchProducts() {
+    let input = document.getElementById("searchInput").value.toLowerCase();
+    let products = document.querySelectorAll(".product");
+
+    products.forEach(product => {
+        let name = product.querySelector(".product-name").textContent.toLowerCase();
+
+        if (name.includes(input)) {
+            product.style.display = "block";
+        } else {
+            product.style.display = "none";
+        }
+    });
+}
+</script>
+
 </body>
-
 </html>
